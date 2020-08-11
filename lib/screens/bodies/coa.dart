@@ -77,8 +77,7 @@ class _COAScreenState extends State<COAScreen> {
                   textAlign: TextAlign.left,
                 ),
               ),
-              Expanded(
-                  child: Table(
+              Table(
                 children: [
                   TableRow(children: [
                     TableCell(
@@ -359,7 +358,7 @@ class _COAScreenState extends State<COAScreen> {
                     ),
                   ])
                 ],
-              )),
+              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
