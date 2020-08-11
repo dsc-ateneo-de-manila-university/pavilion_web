@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+		<!-- Primary Meta Tags -->
+		<title>Pavilion Web</title>
+		<meta name="title" content="Pavilion Web" />
+		<meta
+			name="description"
+			content="Ateneo's first ever student org recruitment mobile platform, passionately made by Developer Student Clubs Loyola"
+		/>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<!-- <meta
+			property="og:url"
+			content="https://jamesblasco.github.io/modal_bottom_sheet/"
+		/> -->
+		<meta property="og:title" content="Pavilion Web" />
+		<meta
+			property="og:description"
+			content="Ateneo's first ever student org recruitment mobile platform, passionately made by Developer Student Clubs Loyola"
+		/>
+		<meta property="og:image" content="https://i.imgur.com/VPrZI1k.png" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<!-- <meta
+			property="twitter:url"
+			content="https://jamesblasco.github.io/modal_bottom_sheet/"
+		/> -->
+		<meta property="twitter:title" content="Pavilion Web" />
+		<meta
+			property="twitter:description"
+			content="Ateneo's first ever student org recruitment mobile platform, passionately made by Developer Student Clubs Loyola"
+		/>
+		<meta property="og:image" content="https://i.imgur.com/VPrZI1k.png" />
+
+		<!-- iOS meta tags & icons -->
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/android-icon-192x192.png"
+		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: 'AIzaSyCfKJeR2RddlLvCoJxD75zM1tAskdsliKs',
+				authDomain: 'admu-recweek-app.firebaseapp.com',
+				databaseURL: 'https://admu-recweek-app.firebaseio.com',
+				projectId: 'admu-recweek-app',
+				storageBucket: 'admu-recweek-app.appspot.com',
+				messagingSenderId: '900423780245',
+				appId: '1:900423780245:web:3054c10ea2da09e87fd89c',
+				measurementId: 'G-40B2H1XPHZ',
+			}
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig)
+			firebase.analytics()
+		</script>
+	</head>
+	<body>
+		<!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', function () {
+					navigator.serviceWorker.register('flutter_service_worker.js', {
+						scope: './',
+					})
+				})
+			}
+		</script>
+		<script src="main.dart.js" type="application/javascript"></script>
+	</body>
+</html>
