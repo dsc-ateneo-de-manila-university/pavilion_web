@@ -42,24 +42,22 @@ class ProductTeamScreen extends StatelessWidget {
                   )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Cedric Atienza",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
-                      ))),
+                      )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Product Manager & Designer",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff000000), fontSize: 12),
-                      ))),
+                      )),
                 ],
               ),
             ),
@@ -76,24 +74,22 @@ class ProductTeamScreen extends StatelessWidget {
                   )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Harvey Sison",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
-                      ))),
+                      )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Developer",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff000000), fontSize: 12),
-                      ))),
+                      )),
                 ],
               ),
             ),
@@ -110,24 +106,22 @@ class ProductTeamScreen extends StatelessWidget {
                   )),
                   Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Franz Taborlupa",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
-                      ))),
+                      )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Developer",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff000000), fontSize: 12),
-                      ))),
+                      )),
                 ],
               ),
             ),
@@ -144,24 +138,22 @@ class ProductTeamScreen extends StatelessWidget {
                   )),
                   Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Pauline Baterna",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
-                      ))),
+                      )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "User Experience Designer",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff000000), fontSize: 12),
-                      ))),
+                      )),
                 ],
               ),
             ),
@@ -178,24 +170,22 @@ class ProductTeamScreen extends StatelessWidget {
                   )),
                   Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Audrey Picar",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
-                      ))),
+                      )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "User Experience Designer",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff000000), fontSize: 12),
-                      ))),
+                      )),
                 ],
               ),
             ),
@@ -212,24 +202,22 @@ class ProductTeamScreen extends StatelessWidget {
                   )),
                   Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Jethro Sia",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
-                      ))),
+                      )),
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                          child: new Text(
+                      child: new Text(
                         "Research and Externals",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff000000), fontSize: 12),
-                      ))),
+                      )),
                 ],
               ),
             ),
