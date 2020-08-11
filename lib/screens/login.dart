@@ -6,12 +6,18 @@ import 'package:pavilion_web/screens/main.dart';
 import 'package:pavilion_web/models/user.dart';
 
 class LoginScreen extends StatefulWidget {
+  static const String route = '/';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    scopes: [
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
   final FirebaseAuth _auth = FirebaseAuth.instance;
   bool isUserSignedIn = false;
 
@@ -60,7 +66,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       onPressed: () {
-                        onGoogleSignIn(context);
+                        // onGoogleSignIn(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MainScreen()),
+                        );
+                        setState(() {
+                          firstName = "Atenean";
+                          email = "";
+                          imageUrl = "";
+                          displayName = "Guest";
+                        });
                       },
                       color: const Color(0xff295EFF),
                       child: Padding(

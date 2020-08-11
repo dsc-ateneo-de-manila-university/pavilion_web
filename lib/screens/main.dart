@@ -13,6 +13,7 @@ import 'package:pavilion_web/models/screen.dart';
 
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
+  static const String route = '/app';
   // ignore: unused_field
   static GoogleSignIn _googleSignIn;
   // ignore: unused_field
