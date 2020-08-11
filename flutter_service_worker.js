@@ -16,7 +16,7 @@ const RESOURCES = {
 "apple-icon-114x114.png": "430ac3757c11f77cb59b4af2fda05389",
 "android-icon-36x36.png": "0bc7ea7c7c85a6dc6b20f10dcdf0c563",
 "apple-icon.png": "ed714f6a8a77cf3e2c972e47db40599e",
-"main.dart.js": "80b39380850b04ac0a79fd8c899748ff",
+"main.dart.js": "9416ccc65046e4cc95f6fc0cd825bc81",
 "index.html": "33620d0da80c088e4a634e82c71cafe3",
 "/": "33620d0da80c088e4a634e82c71cafe3",
 "apple-icon-180x180.png": "b0a61a55b3551e7e6d31c2af642e81aa",
