@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:pavilion_web/screens/main.dart';
 import 'package:pavilion_web/models/user.dart';
 import 'package:pavilion_web/models/screen.dart';
@@ -12,8 +10,6 @@ class TrackerScreen extends StatefulWidget {
 }
 
 class _TrackerScreenState extends State<TrackerScreen> {
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
-  final FirebaseAuth _auth = FirebaseAuth.instance;
   bool isUserSignedIn = false;
   bool maintenance = true;
   int contentState = 0;
@@ -22,58 +18,6 @@ class _TrackerScreenState extends State<TrackerScreen> {
   void initState() {
     contentState = 0;
     super.initState();
-    checkIfUserIsSignedIn();
-  }
-
-  void checkIfUserIsSignedIn() async {
-    var userSignedIn = await _googleSignIn.isSignedIn();
-
-    setState(() {
-      isUserSignedIn = userSignedIn;
-    });
-  }
-
-  Future<FirebaseUser> _handleSignIn() async {
-    FirebaseUser user;
-    bool userSignedIn = await _googleSignIn.isSignedIn();
-
-    setState(() {
-      isUserSignedIn = userSignedIn;
-    });
-
-    if (isUserSignedIn) {
-      user = await _auth.currentUser();
-    } else {
-      final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
-      final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
-
-      final AuthCredential credential = GoogleAuthProvider.getCredential(
-        accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken,
-      );
-
-      user = (await _auth.signInWithCredential(credential)).user;
-      userSignedIn = await _googleSignIn.isSignedIn();
-      setState(() {
-        isUserSignedIn = userSignedIn;
-      });
-    }
-
-    getCurrentUser(user);
-    return user;
-  }
-
-  void onGoogleSignIn(BuildContext context) async {
-    FirebaseUser user = await _handleSignIn();
-    var userSignedIn = await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => MainScreen(user, _googleSignIn)),
-    );
-
-    setState(() {
-      isUserSignedIn = userSignedIn == null ? true : false;
-    });
   }
 
   @override
@@ -242,7 +186,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      onGoogleSignIn(context);
+                      // onGoogleSignIn(context);
                       selectedPageIndex = 1;
                     },
                     color: const Color(0xff295EFF),

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 import 'package:pavilion_web/screens/home.dart';
 import 'package:pavilion_web/screens/list.dart';
@@ -14,15 +12,6 @@ import 'package:pavilion_web/models/screen.dart';
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
   static const String route = '/app';
-  // ignore: unused_field
-  static GoogleSignIn _googleSignIn;
-  // ignore: unused_field
-  FirebaseUser _user;
-
-  MainScreen([FirebaseUser user, GoogleSignIn signIn]) {
-    _user = user;
-    _googleSignIn = signIn;
-  }
 
   @override
   _MainScreenState createState() => new _MainScreenState();
@@ -36,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     ListScreen(_filter, scrollController),
     TrackerScreen(),
-    SettingsScreen(MainScreen._googleSignIn),
+    SettingsScreen(),
   ];
 
   // final dio = new Dio();
