@@ -1,6 +1,10 @@
+import 'package:pavilion_web/screens/empty.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:pavilion_web/models/user.dart';
+import 'package:page_transition/page_transition.dart';
+import 'dart:io';
 
 class DSCLoyolaScreen extends StatefulWidget {
   @override
@@ -9,6 +13,27 @@ class DSCLoyolaScreen extends StatefulWidget {
 
 class _DSCLoyolaState extends State<DSCLoyolaScreen> {
   bool bookmark = false;
+  bool applied = false;
+  bool connected = false;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      try {
+        final result = await InternetAddress.lookup('google.com');
+        if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+          setState(() {
+            connected = true;
+          });
+        }
+      } on SocketException catch (_) {
+        setState(() {
+          connected = false;
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +56,9 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
-                            bookmark = !bookmark;
+                            if (!applied) {
+                              bookmark = !bookmark;
+                            }
                           });
                         },
                         child: SizedBox(
@@ -51,22 +78,38 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
             children: <Widget>[
               Stack(
                 children: <Widget>[
-                  SizedBox(
-                    child: Image.asset('assets/orgs/dsc/cover.png'),
-                    height: 200,
-                  ),
+                  Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        color: const Color(0xffFFFFFF),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xff000000).withOpacity(0.05),
+                            spreadRadius: 1,
+                            blurRadius: 2,
+                            offset: Offset(0, 4), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: SizedBox(
+                          height: 200,
+                          width: double.infinity,
+                          child: Image.asset(
+                            "assets/orgs/lions/covers/DSC.jpg",
+                            fit: BoxFit.cover,
+                          ))),
                   Container(
                     alignment: Alignment.bottomCenter,
+                    padding: EdgeInsets.symmetric(horizontal: 16),
                     height: 184,
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         SizedBox(
-                          width: 64,
-                          height: 64,
-                          child: Image.asset('assets/orgs/dsc/logo.png'),
-                        ),
+                            width: 64,
+                            height: 64,
+                            child:
+                                Image.asset('assets/orgs/lions/logos/DSC.png')),
                         Row(children: <Widget>[
                           InkWell(
                             child: Image.asset('assets/icons/web.png'),
@@ -171,7 +214,12 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.asset('assets/orgs/dsc/csj.png'),
+                child: !connected
+                    ? Image.network(
+                        "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fdsc-loyola%2FImageOne.jpg?alt=media&token=2f5d1f87-f753-4e2c-b037-945ec21bebf9",
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset("assets/orgs/lions/logos/DSC.png"),
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -190,7 +238,12 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.asset('assets/orgs/dsc/tah.png'),
+                child: !connected
+                    ? Image.network(
+                        "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fdsc-loyola%2FImageTwo.JPG?alt=media&token=65f9aee0-723f-46e5-972d-b7921fec97fb",
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset("assets/orgs/lions/logos/DSC.png"),
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -209,12 +262,17 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.asset('assets/orgs/dsc/hacks.png'),
+                child: !connected
+                    ? Image.network(
+                        "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fdsc-loyola%2FImageThree.JPG?alt=media&token=928d9920-0f62-4ac2-a784-3bd0b892185f",
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset("assets/orgs/lions/logos/DSC.png"),
               ),
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
-                    "Eagle Hacks",
+                    "HackFest 2020 Online",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   )),
               Padding(
@@ -233,7 +291,12 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      launch("https://dscadmu.org/");
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: EmptyScreen()));
+                      // launch("https://dscadmu.org/");
                     },
                     color: const Color(0xff295EFF),
                     child: Padding(

@@ -31,7 +31,8 @@ class _TrackerScreenState extends State<TrackerScreen> {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                    Text("Sorry for the Inconvenience",
+                    Text(
+                        "Sorry this feature is unavailable for users using a browser",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff295EFF),
@@ -41,7 +42,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         child: Image.asset('assets/images/maintenance.png')),
                     Text(
-                        "Guests cannot access this screen. Please try signing in with Google",
+                        "Please download our apps in App Store and Play Store instead!",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: const Color(0xff000000),
