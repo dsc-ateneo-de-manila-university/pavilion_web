@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class WebFrame extends StatelessWidget {
@@ -135,14 +136,36 @@ class WebFrame extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   InkWell(
-                                    onTap: () => launch('https://flutter.dev/'),
-                                    child: Image.asset('assets/flutter.png',
+                                    // onTap: () => launch('https://flutter.dev/'),
+                                    onTap: () => {
+                                      Fluttertoast.showToast(
+                                          msg:
+                                              "Pavilion is not yet available in Google Play Store.",
+                                          toastLength: Toast.LENGTH_SHORT,
+                                          gravity: ToastGravity.BOTTOM,
+                                          timeInSecForIosWeb: 1,
+                                          backgroundColor: Colors.grey,
+                                          textColor: Colors.white,
+                                          fontSize: 16.0)
+                                    },
+                                    child: Image.asset('assets/play_store.png',
                                         height: 60),
                                   ),
                                   Spacer(),
                                   InkWell(
-                                    onTap: () => launch('https://dscadmu.org/'),
-                                    child: Image.asset('assets/dsc.png',
+                                    // onTap: () => launch('https://dscadmu.org/'),
+                                    onTap: () => {
+                                      Fluttertoast.showToast(
+                                          msg:
+                                              "Pavilion is not yet available in App Store.",
+                                          toastLength: Toast.LENGTH_SHORT,
+                                          gravity: ToastGravity.BOTTOM,
+                                          timeInSecForIosWeb: 1,
+                                          backgroundColor: Colors.grey,
+                                          textColor: Colors.white,
+                                          fontSize: 16.0)
+                                    },
+                                    child: Image.asset('assets/app_store.png',
                                         height: 60),
                                   ),
                                 ],
