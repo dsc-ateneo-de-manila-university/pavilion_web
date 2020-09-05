@@ -384,11 +384,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       height: 160,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: Image.network(
-                        _projectImageOne,
-                        fit: BoxFit.cover,
-                      ),
-                    )
+                      child: Image.asset(_logo))
                   : SizedBox.shrink(),
               _projectTitleOne != ""
                   ? Padding(
@@ -414,10 +410,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       height: 160,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: Image.network(
-                        _projectImageTwo,
-                        fit: BoxFit.cover,
-                      ),
+                      child: Image.asset(_logo),
                     )
                   : SizedBox.shrink(),
               _projectTitleTwo != ""
@@ -444,10 +437,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       height: 160,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: Image.network(
-                        _projectImageThree,
-                        fit: BoxFit.cover,
-                      ),
+                      child: Image.asset(_logo),
                     )
                   : SizedBox.shrink(),
               _projectTitleThree != ""
