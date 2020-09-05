@@ -136,18 +136,19 @@ class WebFrame extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   InkWell(
-                                    // onTap: () => launch('https://flutter.dev/'),
-                                    onTap: () => {
-                                      Fluttertoast.showToast(
-                                          msg:
-                                              "Pavilion is not yet available in Google Play Store.",
-                                          toastLength: Toast.LENGTH_SHORT,
-                                          gravity: ToastGravity.BOTTOM,
-                                          timeInSecForIosWeb: 3,
-                                          backgroundColor: Colors.grey,
-                                          textColor: Colors.white,
-                                          fontSize: 16.0)
-                                    },
+                                    onTap: () => launch(
+                                        'https://play.google.com/store/apps/details?id=org.dscadmu.admurecweekapp'),
+                                    // onTap: () => {
+                                    //   Fluttertoast.showToast(
+                                    //       msg:
+                                    //           "Pavilion is not yet available in Google Play Store.",
+                                    //       toastLength: Toast.LENGTH_SHORT,
+                                    //       gravity: ToastGravity.BOTTOM,
+                                    //       timeInSecForIosWeb: 3,
+                                    //       backgroundColor: Colors.grey,
+                                    //       textColor: Colors.white,
+                                    //       fontSize: 16.0)
+                                    // },
                                     child: Image.asset('assets/play_store.png',
                                         height: 60),
                                   ),
