@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pavilion_web/screens/main.dart';
 import 'package:pavilion_web/models/user.dart';
 import 'package:pavilion_web/models/screen.dart';
-import 'package:pavilion_web/models/user.dart';
 
 class TrackerScreen extends StatefulWidget {
   @override
