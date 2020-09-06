@@ -350,7 +350,7 @@ const RESOURCES = {
 "android-icon-72x72.png": "df4467890a54e592d2f0584dd2a64658",
 "apple-icon-144x144.png": "a70d9aac74f796297560082d3b5174ba",
 "android-icon-48x48.png": "79145846b4f0acb63279992c3e27258e",
-"main.dart.js": "d23b60b75c86cf628615975df311198b",
+"main.dart.js": "3bfaa643ee47ae3859da9025f28435fb",
 "ms-icon-144x144.png": "a70d9aac74f796297560082d3b5174ba",
 "favicon-32x32.png": "64a22ace2b6c6145d4058d181ae7a564",
 "apple-icon-60x60.png": "90ac578743fe174b9919db3133fd6a98",

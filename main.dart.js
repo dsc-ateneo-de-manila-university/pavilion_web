@@ -50314,7 +50314,7 @@ n=F.aA(b,!1).a
 n=M.y(C.w,T.b1(H.a([T.c8(M.y(l,U.R("assets/team/auds.png",l,l,l,l,l,l),l,l,l,s.b,l,l,l,n.a),1),new T.p(C.at,L.C("Audrey Picar",l,l,l,l,l,l,l,A.v(l,l,C.H,l,l,l,l,l,l,l,l,16,l,C.i,l,l,!0,l,l,l,l,l,l),C.x,l,l),l),new T.p(C.ab,L.C(j,l,l,l,l,l,l,l,A.v(l,l,C.t,l,l,l,l,l,l,l,l,12,l,l,l,l,!0,l,l,l,l,l,l),C.x,l,l),l)],h),C.l,C.m,C.k),l,l,l,l,l,l,C.B,l)
 s=F.aA(b,!1).a
 m=F.aA(b,!1).a
-h=H.a([r,q,p,o,n,M.y(C.w,T.b1(H.a([T.c8(M.y(l,U.R("assets/team/jeth.png",l,l,l,l,l,l),l,l,l,s.b,l,l,l,m.a),1),new T.p(C.at,L.C("Jethro Sia",l,l,l,l,l,l,l,A.v(l,l,C.H,l,l,l,l,l,l,l,l,16,l,C.i,l,l,!0,l,l,l,l,l,l),C.x,l,l),l),new T.p(C.ab,L.C("Research and Externals",l,l,l,l,l,l,l,A.v(l,l,C.t,l,l,l,l,l,l,l,l,12,l,l,l,l,!0,l,l,l,l,l,l),C.x,l,l),l)],h),C.l,C.m,C.k),l,l,l,l,l,l,C.B,l)],h)
+h=H.a([r,q,p,o,n,M.y(C.w,T.b1(H.a([T.c8(M.y(l,U.R("assets/team/jeth.png",l,l,l,l,l,l),l,l,l,s.b,l,l,l,m.a),1),new T.p(C.at,L.C("Jethro Sia",l,l,l,l,l,l,l,A.v(l,l,C.H,l,l,l,l,l,l,l,l,16,l,C.i,l,l,!0,l,l,l,l,l,l),C.x,l,l),l),new T.p(C.ab,L.C("Data Engineer",l,l,l,l,l,l,l,A.v(l,l,C.t,l,l,l,l,l,l,l,l,12,l,l,l,l,!0,l,l,l,l,l,l),C.x,l,l),l)],h),C.l,C.m,C.k),l,l,l,l,l,l,C.B,l)],h)
 m=G.a9o(h,!0,!0,!0)
 h=h.length
 return M.iq(i,M.y(l,new B.r5(new B.Dh(2,12,12,1),m,C.lL,C.o,!1,l,!1,l,!1,l,0,l,h,C.q,C.kQ,l),C.d,l,l,l,l,l,C.B,l),l,l)}}
