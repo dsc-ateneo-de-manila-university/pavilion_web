@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class WebFrame extends StatelessWidget {
@@ -154,18 +154,19 @@ class WebFrame extends StatelessWidget {
                                   ),
                                   Spacer(),
                                   InkWell(
-                                    // onTap: () => launch('https://dscadmu.org/'),
-                                    onTap: () => {
-                                      Fluttertoast.showToast(
-                                          msg:
-                                              "Pavilion is not yet available in App Store.",
-                                          toastLength: Toast.LENGTH_SHORT,
-                                          gravity: ToastGravity.BOTTOM,
-                                          timeInSecForIosWeb: 3,
-                                          backgroundColor: Colors.grey,
-                                          textColor: Colors.white,
-                                          fontSize: 16.0)
-                                    },
+                                    onTap: () => launch(
+                                        'https://apps.apple.com/app/id1529810829'),
+                                    // onTap: () => {
+                                    //   Fluttertoast.showToast(
+                                    //       msg:
+                                    //           "Pavilion is not yet available in App Store.",
+                                    //       toastLength: Toast.LENGTH_SHORT,
+                                    //       gravity: ToastGravity.BOTTOM,
+                                    //       timeInSecForIosWeb: 3,
+                                    //       backgroundColor: Colors.grey,
+                                    //       textColor: Colors.white,
+                                    //       fontSize: 16.0)
+                                    // },
                                     child: Image.asset('assets/app_store.png',
                                         height: 60),
                                   ),

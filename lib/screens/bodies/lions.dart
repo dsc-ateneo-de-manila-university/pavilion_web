@@ -115,6 +115,9 @@ class _LionsScreenState extends State<LionsScreen> {
 
     lifestyleList.addAll(orgList.where((i) => i.cluster.contains("Lifestyle")));
 
+    literatureList
+        .addAll(orgList.where((i) => i.cluster.contains("Literature")));
+
     musicList.addAll(orgList.where((i) => i.cluster.contains("Music")));
 
     spiritualList.addAll(orgList.where((i) => i.cluster.contains("Spiritual")));
